@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.lfkekpoint.listadapters.presentation.modules.binding.SwitchItem" />
+
+        <variable
+            name="vmSwitch"
+            type="SwitchItem" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="28dp"
+            android:text="@{vmSwitch.title}"
+            android:textSize="20sp"
+            tools:text="Send notifications" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="48dp"
+            app:switchListener="@{vmSwitch.listener}"
+            tools:checked="true" />
+
+    </FrameLayout>
+
+</layout>
